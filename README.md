@@ -1,6 +1,6 @@
 # json2excel package
 
-Merge from json with excel,csv
+Merge json with excel,csv
 
 ## functionality:
 
