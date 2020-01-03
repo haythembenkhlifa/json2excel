@@ -53,8 +53,8 @@ $merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_f
 
 Resullt:
 
-array:1 [▼
-0 => array:6 [▼
+array:1 [
+0 => array:6 [
 "name" => "Haythem"
 "age" => 30
 "address.number" => 10
