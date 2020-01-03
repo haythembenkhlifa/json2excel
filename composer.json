@@ -1,22 +1,29 @@
 {
-    "name": "haythem/json2excel",
-    "description": "replacing the excel cell that contain #key# with the keys that are provided in the jsonfile",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Haythem Ben Khlifa",
-            "email": "benkhlifahaythem@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "phpoffice/phpspreadsheet": "^1.10",
-        "tonirilix/nested-json-flattener": "^2.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "haythem\\json2excel\\": "src/"
-        }
+  "name": "haythem/json2excel",
+  "description": "replacing the excel cell that contain #key# with the keys that are provided in the jsonfile",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Haythem Ben Khlifa",
+      "email": "benkhlifahaythem@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "phpoffice/phpspreadsheet": "^1.10",
+    "tonirilix/nested-json-flattener": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "haythem\\json2excel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "haythem\\json2excel\\Json2ExcelServiceProvider"
+      ]
+    }
+  }
 }
