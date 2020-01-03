@@ -42,7 +42,7 @@ class JsonToExcelMerge
 
             $reader = new reader();
 
-            $reader->setReadDataOnly(false);
+            //  $reader->setReadDataOnly(false);
 
             $spreadsheet = $reader->load($file);
 
