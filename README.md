@@ -62,7 +62,22 @@ array:1 [▼
 
 ## Merge Json with and Excel file
 
-Before
+json :
+
+{
+"mark1": 12,
+"mark2": 19.99
+}
+
+Before:
+
+![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/excelbefore.PNG)
+
+After:
+
+![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/excelafter.PNG)
+
+## Merge Json with and Csv file
 
 json :
 
@@ -71,4 +86,13 @@ json :
 "mark2": 19.99
 }
 
-Excel file :
+Before:
+
+![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/csvbefore.PNG)
+
+Afetr:
+
+![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/csvafter.PNG)
+
+mark1;mark2;mark3;name;grade
+12;19,99;Not Yet;Haythem;6
