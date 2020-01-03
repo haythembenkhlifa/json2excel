@@ -12,6 +12,19 @@ Merge json with excel,csv
 
 composer require haythem/json2excel
 
+### Configuration
+
+config file : json2excelconfig.php
+
+You can change the disk form package to use by default it uses the public disk
+
+<?php
+
+return [
+    'disk' => "public"
+];
+
+
 ## Deployment
 
 use haythem\json2excel\functionality\JsonToExcelMerge;
@@ -20,15 +33,17 @@ use haythem\json2excel\functionality\JsonToExcelMerge;
 
 // to make nested json flat array use
 
-$flat_json = $jsontoexcelmerge->jsonToFlatJson(\$nested_json);
+$flat_array = $jsontoexcelmerge->jsonToFlatJson(\$nested_json);
 
 //to merge a Json file with Excel file
 
-$merged_excel_file_name = $jsontoexcelmerge->mergeToExcel($json_file_content, $excel_file_content,"value if data not found", "seprator");
+\$extention can be "xlsx" or "xls"
+
+$merged_excel_file_name = $jsontoexcelmerge->mergeToExcel($json_file_content, $excel_file_content,"Not Done Yet", "\$extention");
 
 //to merge a Json file with Csv file
 
-$merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_file_content,"value if data not found", "seprator");
+$merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_file_content,"Not Done Yet", "seprator");
 
 #Example
 
@@ -50,6 +65,8 @@ $merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_f
   }
 }
 ```
+
+$flat_array = $jsontoexcelmerge->jsonToFlatJson(\$nested_json);
 
 Resullt:
 
@@ -81,6 +98,8 @@ Before:
 
 ![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/excelbefore.PNG)
 
+$merged_excel_file_name = $jsontoexcelmerge->mergeToExcel($json_file_content, $excel_file_content,"Not Done Yet", "xlsx");
+
 After:
 
 ![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/excelafter.PNG)
@@ -99,6 +118,8 @@ After:
 Before:
 
 ![alt text](https://raw.githubusercontent.com/haythembenkhlifa/json2excel/master/src/images/csvbefore.PNG)
+
+$merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_file_content,"Not Done Yet", ";");
 
 Afetr:
 
