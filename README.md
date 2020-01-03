@@ -18,12 +18,7 @@ config file : json2excelconfig.php
 
 You can change the disk form package to use by default it uses the public disk
 
-<?php
-
-return [
-    'disk' => "public"
-];
-
+'disk' => "public"
 
 ## Deployment
 
