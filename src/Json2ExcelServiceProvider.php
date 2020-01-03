@@ -2,6 +2,7 @@
 
 namespace haythem\json2excel;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 
 class Json2ExcelServiceProvider extends ServiceProvider
@@ -10,6 +11,7 @@ class Json2ExcelServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/views', 'json2excel');
+        Storage::disk("json2excel")->files();
     }
     public function register()
     {
