@@ -34,18 +34,22 @@ $merged_csv_file_name = $jsontoexcelmerge->mergeToCsv($json_file_content, $csv_f
 
 ##Nested json to Flat array
 
+## JSON
+
+```json
 {
-"name" : "Haythem",
-"age" : 30,
-"address": {
-"number" : 10,
-"street" : "somewhere",
-"other" : {
-"province" : "Tx",
-"postal_code":"2020"
-}  
- }
+  "name": "Haythem",
+  "age": 30,
+  "address": {
+    "number": 10,
+    "street": "somewhere",
+    "other": {
+      "province": "Tx",
+      "postal_code": "2020"
+    }
+  }
 }
+```
 
 Resullt:
 
@@ -62,12 +66,14 @@ array:1 [▼
 
 ## Merge Json with and Excel file
 
-json :
+## JSON
 
+```json
 {
-"mark1": 12,
-"mark2": 19.99
+  "mark1": 12,
+  "mark2": 19.99
 }
+```
 
 Before:
 
@@ -79,12 +85,14 @@ After:
 
 ## Merge Json with and Csv file
 
-json :
+## JSON
 
+```json
 {
-"mark1": 12,
-"mark2": 19.99
+  "mark1": 12,
+  "mark2": 19.99
 }
+```
 
 Before:
 
