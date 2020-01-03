@@ -14,12 +14,12 @@ use haythem\json2excel\functionality\JsonToExcelMerge;
 
 Route::get('test', function () {
     $json = file_get_contents(__DIR__ . "\sample.json");
-    $file_xlsx = Storage::disk('json2excel')->get('test.xlsx');
-    $file_csv = Storage::disk('json2excel')->get('csv.csv');
+    $file_xlsx = Storage::disk('public')->get('edited.xlsx');
+    $file_csv = Storage::disk('public')->get('csv.csv');
 
 
     $jsontoexcelmerge = new JsonToExcelMerge();
     //return $jsontoexcelmerge->jsonToFlatJson($json);
-    //return $jsontoexcelmerge->mergeToCsv($json, $file_csv);
+    return $jsontoexcelmerge->mergeToCsv($json, $file_csv, "Not Yet", ",");
     //return $jsontoexcelmerge->mergeToExcel($json, $file_xlsx, 1, "xlsx");
 });
